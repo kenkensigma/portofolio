@@ -360,14 +360,29 @@ form textarea{
     background: var(--main-color);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+section {
+    padding: 100px 5% 60px;
+}
+
+
 /* Media queries for responsiveness */
+/* Default styles */
+.menu-toggle {
+    display: none; /* Hide hamburger menu on larger screens */
+}
+
+/* Media queries for small screens */
 @media (max-width: 1024px) {
     header {
         padding: 10px 5%;
     }
 
     .navlist {
-        display: none;
+        display: none; /* Default hidden */
         flex-direction: column;
         background: var(--bg-color);
         position: absolute;
@@ -384,7 +399,7 @@ form textarea{
     }
 
     .menu-toggle {
-        display: block; /* Show hamburger menu */
+        display: block; /* Show hamburger menu on smaller screens */
         cursor: pointer;
         color: var(--text-color);
         font-size: 24px;
@@ -395,7 +410,7 @@ form textarea{
     }
 
     .navlist.active {
-        display: flex; /* Show navlist when active */
+        display: flex; /* Show menu when toggled */
     }
 }
 
@@ -459,4 +474,5 @@ form textarea{
         font-size: 2rem;
     }
 }
+
 
