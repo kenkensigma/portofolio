@@ -154,7 +154,17 @@ header.sticky {
     height: auto;
     width: 100%;
     border-radius: 8px;
+    animation: appear-left 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
+
+.about-text{
+    animation: appear-right 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
 .about-text h2 {
     font-size: var(--h2-font);
     line-height: 1;
@@ -200,6 +210,9 @@ header.sticky {
     padding: 35px 45px;
     border-radius: 8px;
     transition: all .45s ease;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 .s-icons i{
     font-size: 40px;
@@ -475,3 +488,35 @@ section {
     }
 }
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes appear-left {
+    from {
+        opacity: 0;
+        transform: translatex(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}
+
+@keyframes appear-right {
+    from {
+        opacity: 0;
+        transform: translatex(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}
