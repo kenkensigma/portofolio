@@ -359,3 +359,99 @@ form textarea{
     color: var(--text-color);
     background: var(--main-color);
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 5%;
+    }
+
+    .navlist {
+        display: none;
+        flex-direction: column;
+        background: var(--bg-color);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .navlist a {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: var(--text-color);
+        font-size: 24px;
+    }
+
+    .navlist.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-text h1 {
+        font-size: 3rem;
+    }
+
+    .home-text h3 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 120px 10% 80px;
+    }
+
+    .services-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-img {
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        padding: 0 20px;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .button .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .services-content .box {
+        padding: 20px;
+    }
+
+    .contact-text h2 {
+        font-size: 2rem;
+    }
+}
