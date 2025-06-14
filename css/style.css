@@ -70,13 +70,30 @@ section {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgb(42, 42, 42)), url("../img/Screenshot\ 2024-10-30\ 144634.png");
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
+
+.img-box img{
+    border-radius: 500px;
+    margin-left: 500px;
+    width: 600px;
+}
+
+::-webkit-scrollbar{
+    width: 25px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: white;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 50px;
+}
+
 .slide {
     margin-bottom: 20px;
 }
@@ -205,7 +222,7 @@ header.sticky {
     gap: 2.5rem;
     margin-top: 5rem;
 }
-.box{
+/* .box{
     background: var(--bg-color);
     padding: 35px 45px;
     border-radius: 8px;
@@ -233,7 +250,63 @@ header.sticky {
 .box:hover{
     transform: translateY(-8px);
     cursor: pointer;
+} */
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
 }
+
+.skill-box {
+  background-color: var(--bg-color2);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.progress-text {
+    color: #fff;
+}
+
+.skill-box i {
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.skill-box h3 {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.progress-bar {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.progress {
+  background-color: #ff6b4d;
+  height: 100%;
+  width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  transition: width 0.1s linear;
+}
+
+
 
 .portofolio .services-content {
     display: grid;
@@ -488,35 +561,15 @@ section {
     }
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+  will-change: transform, opacity;
 }
 
-@keyframes appear-left {
-    from {
-        opacity: 0;
-        transform: translatex(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translatex(0px);
-    }
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes appear-right {
-    from {
-        opacity: 0;
-        transform: translatex(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translatex(0px);
-    }
-}
